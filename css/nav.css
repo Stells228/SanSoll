@@ -205,7 +205,7 @@
     align-items: flex-start;
     gap: 8px;
   }
-
+ 
   .nav-container {
     flex-direction: row !important;
     align-items: center !important;
@@ -263,6 +263,7 @@
   }
 }
 
+
 /* Кнопка Наверх */
 .back-to-top {
   position: fixed;
@@ -305,6 +306,4 @@ body * {
 body {
   -webkit-touch-callout: none;
   /* iOS Safari */
-
 }
-

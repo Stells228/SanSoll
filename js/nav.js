@@ -49,6 +49,7 @@ function initNavbarEvents() {
       closeMobileMenu();
     });
   });
+  document.querySelector('.close-menu-btn').addEventListener('click', closeMobileMenu);
 }
 
 // Автоматически закрывать меню при ресайзе окна
