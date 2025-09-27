@@ -206,6 +206,13 @@
     gap: 8px;
   }
 
+  .nav-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    left: -20px;
+  }
+
   .nav-menu {
     display: none;
     position: absolute;
@@ -273,4 +280,5 @@ body * {
 body {
   -webkit-touch-callout: none;
   /* iOS Safari */
+
 }
