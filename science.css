@@ -1,0 +1,417 @@
+.science {
+  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.03) 0%, transparent 70%);
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.science::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.science .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #FFD700;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+/* Партнеры Арго */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.partner-card {
+  padding: 38px 32px;
+  text-align: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 215, 0, 0.15);
+  transition: transform .3s, box-shadow .3s;
+  box-shadow: 0 3px 18px #FFD70033;
+  margin-top: 0;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 215, 0, 0.11);
+  box-shadow: 0 8px 28px #FFD70055;
+}
+
+.partner-logo {
+  margin-bottom: 18px;
+}
+
+.partner-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 0 16px rgba(255, 215, 0, 0.2);
+}
+
+.biolit-icon {
+  background: linear-gradient(135deg, #228B22, #32CD32);
+}
+
+.nutricare-icon {
+  background: linear-gradient(135deg, #0052CC, #0073E6);
+}
+
+.nov-icon {
+  background: linear-gradient(135deg, #4B0082, #8A2BE2);
+}
+
+.admed-icon {
+  background: linear-gradient(135deg, #DC143C, #FF4500);
+}
+
+.apifarm-icon {
+  background: linear-gradient(135deg, #FFD700, #FFA500);
+  color: #333;
+}
+
+.fitoline-icon {
+  background: linear-gradient(135deg, #006400, #228B22);
+}
+
+.partner-card h3 {
+  color: #FFD700;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.partner-location {
+  font-size: 0.97rem;
+  color: #ffe;
+  opacity: 0.48;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.partner-advantages {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.advantage {
+  position: relative;
+  padding-left: 22px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.advantage::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #FFD700;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.partner-formula {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: rgba(255, 215, 0, 0.5);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Молекулярная основа здоровья */
+.science-molecules-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.science-molecules-section h3 {
+  color: #FFD700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.science-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.science-card {
+  padding: 40px 28px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 215, 0, 0.18);
+  box-shadow: 0 3px 18px #FFD70022;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: background .2s;
+}
+
+.science-card:hover {
+  background: rgba(255, 215, 0, 0.10);
+}
+
+.molecule-visual {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+}
+
+.molecule-structure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.atom {
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.17);
+}
+
+.carbon {
+  width: 14px;
+  height: 14px;
+  background: #FFD700;
+  top: 54%;
+  left: 54%;
+  transform: translate(-70%, -70%);
+}
+
+.oxygen {
+  width: 10px;
+  height: 10px;
+  background: #FFA500;
+  top: 20%;
+  right: 22%;
+}
+
+.hydrogen {
+  width: 8px;
+  height: 8px;
+  background: #FFE55C;
+  bottom: 18%;
+  left: 25%;
+}
+
+.bond {
+  position: absolute;
+  height: 2px;
+  background: rgba(255, 215, 0, 0.6);
+  transform-origin: left center;
+}
+
+.bond-1 {
+  width: 44px;
+  top: 53%;
+  left: 55%;
+  transform: rotate(38deg);
+}
+
+.bond-2 {
+  width: 31px;
+  top: 38%;
+  left: 32%;
+  transform: rotate(-64deg);
+}
+
+.bond-3 {
+  width: 24px;
+  bottom: 38%;
+  right: 28%;
+  transform: rotate(83deg);
+}
+
+.formula-display {
+  font-family: 'Courier New', monospace;
+  font-size: 1.08rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 16px 0 10px 0;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.19);
+}
+
+.science-card h4 {
+  color: #FFD700;
+  margin-bottom: 10px;
+  font-size: 1.13rem;
+}
+
+.science-card p {
+  color: #fff;
+  opacity: 0.82;
+  font-size: 0.96rem;
+  margin-bottom: 0;
+}
+
+/* Преимущества продукции Арго */
+.argo-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.argo-product-card {
+  padding: 26px 22px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #FFD70016;
+  border: 1px solid rgba(255, 215, 0, 0.09);
+  overflow: hidden;
+}
+
+.argo-product-card:hover {
+  transform: translateY(-7px);
+  background: rgba(255, 215, 0, 0.08);
+  box-shadow: 0 6px 21px #FFD70036;
+}
+
+.argo-product-card h4 {
+  color: #FFA500;
+  font-size: 1.13rem;
+  margin-bottom: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.argo-advantages {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+.argo-advantages li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 0.96rem;
+  color: #fff;
+}
+
+.adv-icon {
+  color: #FFD700;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 1.09rem;
+}
+
+.argo-components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 215, 0, 0.22);
+  color: #FFD700;
+  font-family: 'Courier New', monospace;
+  font-size: 0.94rem;
+  padding: 6px 11px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.26);
+  transition: transform .17s, box-shadow .17s;
+}
+
+.component:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.32);
+}
+
+.comp-icon {
+  font-weight: bold;
+  margin-right: 3px;
+  color: #FFA500;
+}
+
+.component span:last-child {
+  color: #fff;
+  font-weight: 400;
+}
+
+/* Адаптив для секции Science */
+@media (max-width:880px) {
+
+  .partners-grid,
+  .argo-products-grid,
+  .science-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .partner-card,
+  .argo-product-card,
+  .science-card {
+    padding: 24px 10vw;
+  }
+
+  .atom,
+  .carbon,
+  .oxygen,
+  .hydrogen,
+  .bond {
+    width: 12px !important;
+    height: 12px !important;
+  }
+}
+
+/* Запрет выделения текста */
+body,
+body * {
+  user-select: none;
+  /* Стандарт */
+  -webkit-user-select: none;
+  /* Safari/Chrome */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+}
+
+/* Запрет правого клика */
+body {
+  -webkit-touch-callout: none;
+  //* iOS Safari */
+}

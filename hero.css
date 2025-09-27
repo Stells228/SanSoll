@@ -1,0 +1,465 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #000 0%, #272727 100%);
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 85% 50%, rgba(255, 165, 0, 0.08) 0%, transparent 40%),
+    linear-gradient(135deg, #000 0%, #222 100%);
+  z-index: 1;
+}
+
+/* Плавающие пилюли и формулы поверх hero */
+.hero-pills,
+.hero-formulas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-pill {
+  position: absolute;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  opacity: 0.16;
+  animation: hero-pill-float 8s infinite ease-in-out;
+}
+
+.pill-1 {
+  width: 30px;
+  height: 15px;
+  top: 22%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.pill-2 {
+  width: 45px;
+  height: 18px;
+  top: 55%;
+  right: 17%;
+  animation-delay: 1s;
+}
+
+.pill-3 {
+  width: 28px;
+  height: 12px;
+  bottom: 26%;
+  left: 19%;
+  animation-delay: 2s;
+}
+
+.pill-4 {
+  width: 38px;
+  height: 17px;
+  top: 39%;
+  right: 27%;
+  animation-delay: 3s;
+}
+
+.pill-5 {
+  width: 20px;
+  height: 10px;
+  bottom: 11%;
+  right: 12%;
+  animation-delay: 4s;
+}
+
+@keyframes hero-pill-float {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  33% {
+    transform: translateY(-18px) rotate(90deg);
+  }
+
+  66% {
+    transform: translateY(10px) rotate(270deg);
+  }
+}
+
+.hero-formula {
+  position: absolute;
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 215, 0, 0.25);
+  font-size: 17px;
+  font-weight: bold;
+  animation: formula-float 6s infinite ease-in-out;
+}
+
+.formula-hero-1 {
+  top: 25%;
+  left: 13%;
+  animation-delay: 0s;
+}
+
+.formula-hero-2 {
+  top: 75%;
+  right: 16%;
+  animation-delay: 2s;
+}
+
+.formula-hero-3 {
+  bottom: 23%;
+  left: 61%;
+  animation-delay: 4s;
+}
+
+@keyframes formula-float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.18;
+  }
+
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.29;
+  }
+}
+
+/* Содержимое hero */
+.hero-content {
+  z-index: 10;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 8px 22px;
+  margin-bottom: 35px;
+  font-size: 15px;
+  font-weight: 500;
+  color: #FFD700;
+  background: rgba(30, 30, 0, 0.18);
+  border-radius: 15px;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1.08;
+  margin-bottom: 32px;
+  letter-spacing: 0.01em;
+}
+
+.title-line {
+  display: block;
+  opacity: 0;
+  transform: translateY(48px);
+  animation: slideUpFade 1s ease forwards;
+}
+
+.title-line:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.title-line:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.highlight {
+  background: linear-gradient(135deg, #FFD700 10%, #FFA500 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.title-pill {
+  width: 41px;
+  height: 20px;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  border-radius: 10px;
+  animation: title-pill-glow 3s infinite;
+}
+
+@keyframes title-pill-glow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.24);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.43);
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.15rem;
+  opacity: 0.83;
+  margin-bottom: 40px;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA */
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 52px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: visible;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(255, 215, 0, 0.17);
+}
+
+.btn-arrow {
+  transition: transform 0.3s;
+}
+
+.primary-btn:hover .btn-arrow {
+  transform: translateX(6px);
+}
+
+.btn-pills {
+  position: absolute;
+  top: -7px;
+  right: -9px;
+  display: flex;
+  gap: 2px;
+}
+
+.btn-pill {
+  width: 9px;
+  height: 5px;
+  background: rgba(0, 0, 0, 0.17);
+  border-radius: 2px;
+  animation: btn-pill-bounce 2s infinite alternate;
+}
+
+.btn-pill:nth-child(2) {
+  animation-delay: 0.28s;
+}
+
+@keyframes btn-pill-bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-2px);
+  }
+}
+
+.secondary-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+  position: relative;
+}
+
+.secondary-btn:hover {
+  background: rgba(255, 215, 0, 0.09);
+  transform: translateY(-3px);
+}
+
+.btn-formula {
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  font-family: 'Courier New', monospace;
+  color: rgba(255, 215, 0, 0.47);
+}
+
+/* HERO Статистика */
+.hero-stats {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  padding: 21px 18px 14px 18px;
+  text-align: center;
+  min-width: 90px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 1px 9px #FFD70011;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  position: relative;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #FFD700;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+.stat-icon {
+  font-size: 1.5rem;
+  margin-bottom: 9px;
+  animation: stat-icon-pulse 2.6s infinite;
+}
+
+@keyframes stat-icon-pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  48% {
+    transform: scale(1.13);
+  }
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 11;
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  border-right: 2.5px solid #FFD700;
+  border-bottom: 2.5px solid #FFD700;
+  transform: rotate(45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(12px) rotate(45deg);
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    padding: 0 5vw;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-pills,
+  .hero-formulas {
+    opacity: 0.65;
+  }
+}
+
+@media (max-width:600px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .stat-item {
+    min-width: 140px;
+  }
+
+  .scroll-arrow {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Запрет выделения текста */
+body,
+body * {
+  user-select: none;
+  /* Стандарт */
+  -webkit-user-select: none;
+  /* Safari/Chrome */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+}
+
+/* Запрет правого клика */
+body {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+}
