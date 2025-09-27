@@ -1,0 +1,169 @@
+:root {
+  --color-bg: #000;
+  --color-white: #fff;
+  --color-yellow: #FFD700;
+  --color-orange: #FFA500;
+  --color-orange-dark: #B33F00;
+  --color-glass: rgba(255, 255, 255, 0.07);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-white);
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  color: var(--color-yellow);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-orange);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-yellow);
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+ul,
+ol {
+  margin-left: 18px;
+  margin-bottom: 1em;
+}
+
+strong {
+  font-weight: 700;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Матовое оформление общих блоков */
+.glass-card {
+  background: var(--color-glass);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 215, 0, 0.13);
+  backdrop-filter: blur(12px) saturate(120%);
+  box-shadow: 0 6px 42px 0 rgba(255, 215, 0, 0.05);
+}
+
+/* Кнопки по умолчанию */
+button {
+  font-family: inherit;
+  border: none;
+  outline: none;
+  background: var(--color-yellow);
+  color: var(--color-bg);
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+button:active {
+  background: var(--color-orange-dark);
+  color: var(--color-white);
+}
+
+/* Адаптивка */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.0rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 0 7vw;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 3vw;
+  }
+}
+
+::-webkit-scrollbar {
+  height: 7px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--color-yellow), var(--color-orange));
+  border-radius: 8px;
+}
+
+/* Запрет выделения текста */
+body,
+body * {
+  user-select: none;
+  /* Стандарт */
+  -webkit-user-select: none;
+  /* Safari/Chrome */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE/Edge */
+}
+
+/* Запрет правого клика */
+body {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+}
