@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>SanSoll — Натуральные БАДы и товары для здоровья | Ozon</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="SanSoll — магазин натуральных БАДов, экстрактов и добавок для здоровья на Ozon. Качественная продукция для всей семьи.">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/science.css">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/reviews.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/floating.css">
+  <link rel="stylesheet" href="css/catalog-filters.css">
+  <link rel="stylesheet" href="css/certificates.css">
+  <link rel="stylesheet" href="css/faq.css">
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+</head>
+
+<body>
+  <!-- задний фон -->
+  <div class="floating-elements">
+    <div class="floating-pill pill-yellow"></div>
+    <div class="floating-pill pill-orange"></div>
+    <div class="floating-pill pill-small"></div>
+    <div class="floating-pill pill-capsule"></div>
+    <div class="floating-pill pill-round"></div>
+    <div class="floating-pill pill-large"></div>
+    <div class="floating-formula formula-1">C₈H₁₁NO₂</div>
+    <div class="floating-formula formula-2">C₆H₈O₆</div>
+    <div class="floating-formula formula-3">C₄₃H₆₆N₁₂O₁₂S₂</div>
+    <div class="molecular-structure structure-1"></div>
+    <div class="molecular-structure structure-2"></div>
+    <div class="molecular-structure structure-3"></div>
+  </div>
+
+  <!-- Загрузка сайта -->
+  <div class="loading-screen" id="loading">
+    <div class="loader">
+      <div class="logo-animation">
+        <div class="pill-icon animated-pill"></div>
+        <div class="molecular-bg">
+          <div class="molecule"></div>
+          <div class="molecule"></div>
+          <div class="molecule"></div>
+        </div>
+      </div>
+      <div class="loading-text">SanSoll</div>
+      <div class="loading-subtitle">Загружаем здоровье...</div>
+    </div>
+  </div>
+
+  <!-- Навигация -->
+  <nav class="nav-bar glass-effect" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-complex">
+          <div class="logo-pill"></div>
+          <div class="logo-molecules">
+            <div class="molecule-dot"></div>
+            <div class="molecule-dot"></div>
+            <div class="molecule-dot"></div>
+          </div>
+        </div>
+        <span>SanSoll</span>
+      </div>
+      <div class="nav-menu" id="nav-menu">
+        <span class="nav-link" onclick="scrollToSection('hero')">Главная</span>
+        <span class="nav-link" onclick="scrollToSection('about')">О нас</span>
+        <span class="nav-link" onclick="scrollToSection('products')">Товары</span>
+        <span class="nav-link" onclick="scrollToSection('science')">Наука</span>
+        <span class="nav-link" onclick="scrollToSection('reviews')">Отзывы</span>
+        <span class="nav-link" onclick="scrollToSection('certificates')">Сертификаты</span>
+        <span class="nav-link" onclick="scrollToSection('contact')">Контакты</span>
+      </div>
+      <a href="https://www.ozon.ru/seller/ip-kurish-stefaniya-tarasovna-2222311/?miniapp=seller_2222311" target="_blank"
+        class="cta-button">
+        <span>Купить на Ozon</span>
+        <div class="button-pill"></div>
+      </a>
+      <div class="hamburger" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Главная -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pills">
+      <div class="hero-pill pill-1"></div>
+      <div class="hero-pill pill-2"></div>
+      <div class="hero-pill pill-3"></div>
+      <div class="hero-pill pill-4"></div>
+      <div class="hero-pill pill-5"></div>
+    </div>
+    <div class="hero-formulas">
+      <div class="hero-formula formula-hero-1">C₆H₁₂O₆</div>
+      <div class="hero-formula formula-hero-2">H₂O</div>
+      <div class="hero-formula formula-hero-3">C₂₁H₃₀O₂</div>
+    </div>
+    <div class="hero-content fade-in">
+      <div class="hero-badge glass-card">
+        <span>Научный подход к здоровью</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-line">Магазин</span>
+        <span class="title-line highlight">
+          <div class="title-logo">
+            <div class="title-pill"></div>
+            SanSoll
+          </div>
+        </span>
+        <span class="title-line">на Ozon</span>
+      </h1>
+      <p class="hero-subtitle">
+        Высококачественные БАДы, экстракты и добавки для поддержания здоровья всей семьи
+      </p>
+      <div class="hero-cta">
+        <button class="primary-btn" onclick="scrollToSection('products')">
+          <span>Посмотреть товары</span>
+          <div class="btn-arrow">→</div>
+          <div class="btn-pills">
+            <div class="btn-pill"></div>
+            <div class="btn-pill"></div>
+          </div>
+        </button>
+        <button class="secondary-btn glass-card" onclick="scrollToSection('science')">
+          <span>Научная база</span>
+          <div class="btn-formula">C₆H₈O₆</div>
+        </button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item glass-card">
+          <div class="stat-icon">⭐</div>
+          <div class="stat-number">4.8</div>
+          <div class="stat-label">Рейтинг</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-icon">📦</div>
+          <div class="stat-number">150+</div>
+          <div class="stat-label">Заказов</div>
+        </div>
+        <div class="stat-item glass-card">
+          <div class="stat-icon">💬</div>
+          <div class="stat-number">60</div>
+          <div class="stat-label">Отзывов</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- Онас -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-badge glass-card">
+          <div class="badge-molecules">
+            <div class="badge-molecule"></div>
+            <div class="badge-molecule"></div>
+          </div>
+          <span>Наша миссия</span>
+        </div>
+        <h2>Здоровье — это инвестиция в будущее</h2>
+        <p>Мы предлагаем только проверенные натуральные продукты для поддержания вашего здоровья</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card glass-card slide-up" data-delay="0">
+          <div class="card-icon-complex">
+            <div class="card-pill-bg"></div>
+            <div class="card-icon">🌿</div>
+          </div>
+          <h3>Натуральность</h3>
+          <p>Только природные компоненты без синтетических добавок</p>
+          <div class="card-formula">C₆H₁₂O₆</div>
+        </div>
+        <div class="about-card glass-card slide-up" data-delay="200">
+          <div class="card-icon-complex">
+            <div class="card-pill-bg"></div>
+            <div class="card-icon">✓</div>
+          </div>
+          <h3>Качество</h3>
+          <p>Все товары проходят строгий контроль качества</p>
+          <div class="card-formula">H₂O₂</div>
+        </div>
+        <div class="about-card glass-card slide-up" data-delay="400">
+          <div class="card-icon-complex">
+            <div class="card-pill-bg"></div>
+            <div class="card-icon">🚚</div>
+          </div>
+          <h3>Доставка</h3>
+          <p>Быстрая и надежная доставка через Ozon</p>
+          <div class="card-formula">C₈H₁₁NO₂</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Продукция -->
+  <section id="products" class="products">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-badge glass-card">
+          <div class="products-pills">
+            <div class="mini-pill"></div>
+            <div class="mini-pill"></div>
+            <div class="mini-pill"></div>
+          </div>
+          <span>Наш каталог</span>
+        </div>
+        <h2>Популярные товары</h2>
+      </div>
+
+      <div class="catalog-filters">
+        <div class="filters-header">
+          <h2 class="filters-title">Фильтры</h2>
+          <button class="clear-all-filters">
+            <span>✖</span>
+            Очистить все
+          </button>
+        </div>
+
+        <!-- Поиск по каталогу -->
+        <div class="catalog-search">
+          <div class="search-input-container">
+            <input type="text" placeholder="Поиск товаров..." id="catalog-search-input">
+          </div>
+        </div>
+
+        <!-- Активные фильтры -->
+        <div class="active-filters" id="active-filters" style="display: none;">
+          <div class="active-filters-title">Активные фильтры:</div>
+          <div class="active-filters-list" id="active-filters-list">
+          </div>
+        </div>
+
+        <!-- Счетчик результатов -->
+        <div class="results-counter" id="results-counter">
+          <span class="results-text">Найдено товаров: <strong>21</strong></span>
+        </div>
+
+        <!-- Фильтр по категориям -->
+        <div class="filter-section">
+          <h3>Категории</h3>
+          <div class="filter-buttons category-filters">
+            <button class="filter-btn" data-category="detox">
+              Пищеварение и очищение<span class="count">(12)</span>
+            </button>
+            <button class="filter-btn" data-category="immunity">
+              Иммунитет и защита<span class="count">(4)</span>
+            </button>
+            <button class="filter-btn" data-category="pretty">
+              Красота и фигура<span class="count">(5)</span>
+            </button>
+            <button class="filter-btn" data-category="cardiovascular">
+              Сердце и сосуды<span class="count">(3)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Фильтр по производителям -->
+        <div class="filter-section">
+          <h3>Производители</h3>
+          <div class="filter-buttons partner-filters">
+            <button class="filter-btn" data-partner="biolit">
+              Биолит <span class="count">(10)</span>
+            </button>
+            <button class="filter-btn" data-partner="admedicine">
+              AD Medicine <span class="count">(5)</span>
+            </button>
+            <button class="filter-btn" data-partner="apifarm">
+              Апифарм <span class="count">(3)</span>
+            </button>
+            <button class="filter-btn" data-partner="fitoline">
+              ФитоЛайн <span class="count">(1)</span>
+            </button>
+            <button class="filter-btn" data-partner="nov">
+              НПФ Новь <span class="count">(1)</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Фильтр по ценам -->
+        <div class="filter-section">
+          <h3>Цена</h3>
+          <div class="filter-buttons price-filters">
+            <button class="filter-btn" data-price-range="budget">
+              До 1,500₽ <span class="count">(8)</span>
+            </button>
+            <button class="filter-btn" data-price-range="medium">
+              1,500-3,000₽ <span class="count">(11)</span>
+            </button>
+            <button class="filter-btn" data-price-range="premium">
+              От 3,000₽ <span class="count">(2)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Товары в js -->
+      </div>
+    </div>
+
+    <script>
+      // Настройка поиска
+      document.getElementById('catalog-search-input').addEventListener('input', function () {
+        const searchTerm = this.value;
+        if (typeof performSearch === 'function') {
+          performSearch(searchTerm);
+        } 
+        else {
+          console.warn('Функция performSearch не найдена');
+        }
+      });
+    </script>
+  </section>
+
+  <!-- наука -->
+  <section id="science" class="science">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-badge glass-card">
+          <span>Научный подход</span>
+        </div>
+        <h2>Наши партнеры по разработке и производству</h2>
+        <p>SanSoll сотрудничает с ведущими производителями компании Арго — научно-технологическими лидерами в области
+          БАДов</p>
+      </div>
+
+      <!-- partners -->
+      <div class="partners-grid">
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon biolit-icon">🌿</div>
+          </div>
+          <h3>ООО "Биолит"</h3>
+          <div class="partner-location">Томск, с 1991 года</div>
+          <div class="partner-advantages">
+            <div class="advantage">Собственные поля в Алтае и Хакасии</div>
+            <div class="advantage">Стандарт качества ХАССП</div>
+            <div class="advantage">Партнерство с НИИ кардиологии СО РАН</div>
+            <div class="advantage">30+ лет опыта производства</div>
+          </div>
+        </div>
+
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon nutricare-icon">🇺🇸</div>
+          </div>
+          <h3>NutriCare International</h3>
+          <div class="partner-location">Калифорния, США, с 1990 года</div>
+          <div class="partner-advantages">
+            <div class="advantage">Стандарт качества GMP</div>
+            <div class="advantage">100% натуральное растительное сырье</div>
+            <div class="advantage">Современные лаборатории</div>
+            <div class="advantage">Международное признание</div>
+          </div>
+        </div>
+
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon nov-icon">💎</div>
+          </div>
+          <h3>НПФ "Новь"</h3>
+          <div class="partner-location">Новосибирск, с 1992 года</div>
+          <div class="partner-advantages">
+            <div class="advantage">Единственный российский производитель с правом использования эмблемы Красного Креста
+            </div>
+            <div class="advantage">Стандарт качества ISO 9000</div>
+            <div class="advantage">Патенты РФ, Швейцарии и США</div>
+            <div class="advantage">Природный минерал цеолит в основе</div>
+          </div>
+        </div>
+
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon admed-icon">🧬</div>
+          </div>
+          <h3>AD Medicine LLC</h3>
+          <div class="partner-location">Калифорния, США</div>
+          <div class="partner-advantages">
+            <div class="advantage">Лидер коллоидных БАД нового поколения</div>
+            <div class="advantage">Стандарт GMP</div>
+            <div class="advantage">Инновационные разработки</div>
+            <div class="advantage">Международные награды</div>
+          </div>
+        </div>
+
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon apifarm-icon">🐝</div>
+          </div>
+          <h3>ООО "Апифарм"</h3>
+          <div class="partner-location">Новосибирск, с 1999 года</div>
+          <div class="partner-advantages">
+            <div class="advantage">Расположен на территории НИИ медицинской биотехнологии ГНЦ ВБ "Вектор"</div>
+            <div class="advantage">Клинические тестирования с НИИ СО РАМН</div>
+            <div class="advantage">Специализация на продуктах пчеловодства</div>
+            <div class="advantage">Высокие стандарты качества</div>
+          </div>
+        </div>
+
+        <div class="partner-card glass-card slide-up">
+          <div class="partner-logo">
+            <div class="partner-icon fitoline-icon">🌲</div>
+          </div>
+          <h3>ООО "ФитоЛайн"</h3>
+          <div class="partner-location">Москва</div>
+          <div class="partner-advantages">
+            <div class="advantage">Золотая медаль им. И.И. Мечникова</div>
+            <div class="advantage">Клинические испытания в МГСУ</div>
+            <div class="advantage">Патенты РФ на зубные пасты</div>
+            <div class="advantage">Хвойные БАД и косметика</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Молекулярная основа -->
+      <div class="science-molecules-section">
+        <!-- Продукция Арго -->
+        <h3>Торговая продукция Арго — преимущества и компоненты</h3>
+        <div class="argo-products-grid">
+          <!-- Карточка 1 -->
+          <div class="argo-product-card glass-card slide-up">
+            <div class="partner-logo">
+              <div class="partner-icon biolit-icon">🌿</div>
+            </div>
+            <h4>Витамины и минералы Argo</h4>
+            <ul class="argo-advantages">
+              <li><span class="adv-icon">✔</span> 15 витаминов (A, C, D3, E, K, B-группы)</li>
+              <li><span class="adv-icon">✔</span> 8 минералов (Mg, Zn, Se, Cu)</li>
+              <li><span class="adv-icon">✔</span> Способствуют иммунной защите</li>
+              <li><span class="adv-icon">✔</span> GMP-сертификация</li>
+            </ul>
+            <div class="argo-components">
+              <div class="component"><span class="comp-icon">C₆H₈O₆</span><span>Витамин C</span></div>
+              <div class="component"><span class="comp-icon">Mg</span><span>Магний</span></div>
+              <div class="component"><span class="comp-icon">Zn</span><span>Цинк</span></div>
+              <div class="component"><span class="comp-icon">D₃</span><span>Витамин D₃</span></div>
+            </div>
+          </div>
+          <!-- Карточка 2 -->
+          <div class="argo-product-card glass-card slide-up">
+            <div class="partner-logo">
+              <div class="partner-icon nov-icon">💎</div>
+            </div>
+            <h4>Литовит-М (НПФ «Новь»)</h4>
+            <ul class="argo-advantages">
+              <li><span class="adv-icon">✔</span> Природный цеолит-цеолитит</li>
+              <li><span class="adv-icon">✔</span> Энтеросорбция токсинов</li>
+              <li><span class="adv-icon">✔</span> Клинически протестирован</li>
+              <li><span class="adv-icon">✔</span> ISO 9001, Красный Крест</li>
+            </ul>
+            <div class="argo-components">
+              <div class="component"><span class="comp-icon">SiO₂</span><span>Кремнезем (цеолит)</span></div>
+              <div class="component"><span class="comp-icon">Al₂O₃</span><span>Оксид алюминия</span></div>
+              <div class="component"><span class="comp-icon">Fe₂O₃</span><span>Оксид железа</span></div>
+            </div>
+          </div>
+          <!-- Карточка 3 -->
+          <div class="argo-product-card glass-card slide-up">
+            <div class="partner-logo">
+              <div class="partner-icon nutricare-icon">🧪</div>
+            </div>
+            <h4>Коллоидные формулы NutriCare</h4>
+            <ul class="argo-advantages">
+              <li><span class="adv-icon">✔</span> Уникальные коллоиды микроэлементов</li>
+              <li><span class="adv-icon">✔</span> Повышенная биодоступность</li>
+              <li><span class="adv-icon">✔</span> NSF-сертификация</li>
+              <li><span class="adv-icon">✔</span> Без ГМО и консервантов</li>
+            </ul>
+            <div class="argo-components">
+              <div class="component"><span class="comp-icon">Ag</span><span>Коллоидное серебро</span></div>
+              <div class="component"><span class="comp-icon">Au</span><span>Коллоидное золото</span></div>
+              <div class="component"><span class="comp-icon">Si</span><span>Коллоидный кремний</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- отзывы -->
+  <section id="reviews" class="reviews">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-badge glass-card">
+          <span>Отзывы</span>
+        </div>
+        <h2>Что говорят наши покупатели</h2>
+      </div>
+
+      <div class="reviews-slider" id="reviews-slider">
+        <!-- Отзывы в js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- документация -->
+  <section id="certificates" class="certificates">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge glass-card">Сертификаты</span>
+        <h2>Вся наша продукция прошла гос регестрацию</h2>
+      </div>
+      <div class="certificates-slider" id="certificates-slider">
+        <div class="certificate-slide">
+          <img src="docs/1.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/2.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/3.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/4.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/5.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/6.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/7.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/8.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/9.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/10.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/11.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/12.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/13.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/14.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/15.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/16.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/17.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/18.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/19.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/20.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/21.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/22.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/23.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/24.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/25.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/26.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/27.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/28.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/29.webp">
+        </div>
+        <div class="certificate-slide">
+          <img src="docs/30.webp">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-badge glass-card">FAQ</span>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">Какой срок годности у ваших товаров?</button>
+          <div class="faq-answer">
+            <p>Срок годности указан на упаковке каждого изделия. Обычно это 12–24 месяца с даты производства при
+              соблюдении условий хранения.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Из чего состоят ваши продукты?</button>
+          <div class="faq-answer">
+            <p>Все ингредиенты перечислены на упаковке и на странице описания товара. Мы используем только натуральные
+              компоненты без ГМО и искусственных добавок.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Проходят ли ваши товары сертификацию?</button>
+          <div class="faq-answer">
+            <p>Да, все продукты сертифицированы и имеют действующие сертификаты качества. Их можно просмотреть в разделе
+              «Сертификаты».</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">При какой температуре хранить продукцию?</button>
+          <div class="faq-answer">
+            <p>Рекомендуем хранить в сухом прохладном месте при температуре от +5 °C до +25 °C, вдали от прямых
+              солнечных лучей.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Как оформить возврат товара?</button>
+          <div class="faq-answer">
+            <p>Для возврата напишите нам в телеграм (@SanSoll_bot) или воспользуйтесь формой обратной связи. Возврат
+              возможен в течение 14 дней при сохранении товарного вида.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Содержит ли ваша продукция спиртовую основу?</button>
+          <div class="faq-answer">
+            <p>Нет, вся наша продукция не содержит спирт. Большая часть продукции состоит из чистого экстракта или на
+              водной основе.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Можно ли давать вашу продукцию детям?</button>
+          <div class="faq-answer">
+            <p>Да, можно, но в соотношении 1/2 от взрослой дозы.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- контакты -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-content glass-card">
+        <div class="contact-info">
+          <h2>Свяжитесь с нами</h2>
+          <p>Готовы ответить на ваши вопросы и помочь с выбором</p>
+
+          <div class="contact-methods">
+            <a href="https://t.me/SanSoll_bot?start=1" target="_blank" class="contact-method">
+              <div class="method-icon">📱</div>
+              <div class="method-info">
+                <h4>Telegram</h4>
+                <span>@SanSoll_bot</span>
+              </div>
+              <div class="method-pills">
+                <div class="contact-pill"></div>
+                <div class="contact-pill"></div>
+              </div>
+            </a>
+
+            <a href="https://www.ozon.ru/seller/sansoll-2222311/?miniapp=seller_2222311" target="_blank"
+              class="contact-method">
+              <div class="method-icon">🛒</div>
+              <div class="method-info">
+                <h4>Наш магазин</h4>
+                <span>SanSoll на Ozon</span>
+              </div>
+              <div class="method-pills">
+                <div class="contact-pill"></div>
+                <div class="contact-pill"></div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-visual">
+          <div class="contact-logo-complex">
+            <div class="logo-structure">
+              <div class="structure-pill main-pill"></div>
+              <div class="structure-molecules">
+                <div class="mol-1"></div>
+                <div class="mol-2"></div>
+                <div class="mol-3"></div>
+                <div class="mol-4"></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-pills-contact">
+            <div class="pill pill-1"></div>
+            <div class="pill pill-2"></div>
+            <div class="pill pill-3"></div>
+            <div class="pill pill-4"></div>
+            <div class="pill pill-5"></div>
+            <div class="pill pill-6"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer glass-effect">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <div class="footer-logo-complex">
+            <div class="footer-pill"></div>
+            <div class="footer-molecules">
+              <div class="footer-mol"></div>
+              <div class="footer-mol"></div>
+            </div>
+          </div>
+          <span>SanSoll</span>
+        </div>
+        <p>© 2025 SanSoll. Натуральные решения для здоровья.</p>
+        <div class="footer-formula">C₆H₈O₆ + H₂O = Здоровье</div>
+      </div>
+    </div>
+  </footer>
+  <button id="backToTop" class="back-to-top" onclick="scrollToTop()">↑</button>
+
+  <script src="js/common.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/about.js"></script>
+  <script src="js/science.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/catalog-filters-fix.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/floating.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/faq.js"></script>
+
+</body>
+
+</html>

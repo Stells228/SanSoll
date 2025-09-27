@@ -1,0 +1,126 @@
+{
+  "categories": [
+    {
+      "id": "detox",
+      "name": "Пищеварение и очищение",
+      "count": 12
+    },
+    {
+      "id": "immunity",
+      "name": "Иммунитет и защита",
+      "count": 4
+    },
+    {
+      "id": "beauty",
+      "name": "Красота и фигура",
+      "count": 3
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Сердце и сосуды",
+      "count": 2
+    }
+  ],
+  "partners": [
+    {
+      "id": "biolit",
+      "name": "Биолит",
+      "count": 10,
+      "specialty": "Натуральные экстракты"
+    },
+    {
+      "id": "admedicine",
+      "name": "AD Medicine",
+      "count": 5,
+      "specialty": "Коллоидные технологии"
+    },
+    {
+      "id": "apifarm",
+      "name": "Апифарм",
+      "count": 3,
+      "specialty": "Сердечно-сосудистая система"
+    },
+    {
+      "id": "fitoline",
+      "name": "ФитоЛайн",
+      "count": 1,
+      "specialty": "Противовирусные"
+    },
+    {
+      "id": "nov",
+      "name": "НПФ Новь",
+      "count": 1,
+      "specialty": "Женское здоровье"
+    }
+  ],
+  "price_ranges": [
+    {
+      "id": "budget",
+      "name": "До 1,500₽",
+      "min": 0,
+      "max": 1500,
+      "count": 8
+    },
+    {
+      "id": "medium",
+      "name": "1,500-3,000₽",
+      "min": 1500,
+      "max": 3000,
+      "count": 11
+    },
+    {
+      "id": "premium",
+      "name": "От 3,000₽",
+      "min": 3000,
+      "max": 10000,
+      "count": 2
+    }
+  ],
+  "tags": [
+    {
+      "id": "detox",
+      "name": "Детокс",
+      "count": 12
+    },
+    {
+      "id": "herbs",
+      "name": "Травы",
+      "count": 8
+    },
+    {
+      "id": "immunity",
+      "name": "Иммунитет",
+      "count": 6
+    },
+    {
+      "id": "cleansing",
+      "name": "Очищение",
+      "count": 10
+    },
+    {
+      "id": "natural",
+      "name": "Натуральные",
+      "count": 15
+    },
+    {
+      "id": "liver",
+      "name": "Печень",
+      "count": 4
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Сердце",
+      "count": 3
+    },
+    {
+      "id": "beauty",
+      "name": "Красота",
+      "count": 3
+    },
+    {
+      "id": "weight",
+      "name": "Похудение",
+      "count": 2
+    }
+  ]
+}
