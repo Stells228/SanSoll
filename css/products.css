@@ -1320,7 +1320,7 @@ select.form-control {
   }
 
   .product-slider {
-    height: 200px;
+    height: 500px;
   }
 
   .product-card h3 {
@@ -1410,7 +1410,7 @@ select.form-control {
   }
 
   .product-slider {
-    height: 180px;
+    height: 300px;
   }
 
   .product-features {
@@ -1687,4 +1687,5 @@ select.form-control {
   .filter-buttons .filter-btn {
     padding: var(--space-4) var(--space-10);
   }
+
 }
