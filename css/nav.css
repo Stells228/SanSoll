@@ -238,6 +238,31 @@
   }
 }
 
+@media (max-width: 480px) {
+  .hamburger {
+    z-index: 1050; 
+  }
+
+  .nav-menu {
+    z-index: 1000;
+    top: 20px;
+  }
+
+  .close-menu-btn {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #FFD700;
+    z-index: 1060; 
+  }
+}
+
 /* Кнопка Наверх */
 .back-to-top {
   position: fixed;
@@ -282,3 +307,4 @@ body {
   /* iOS Safari */
 
 }
+
