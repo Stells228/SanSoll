@@ -1,0 +1,277 @@
+.nav-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  background: var(--nav-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--nav-border);
+  transition: all 0.3s ease;
+}
+
+.nav-bar.scrolled {
+  background: var(--nav-bg-scrolled);
+  backdrop-filter: blur(20px);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- Логотип --- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-complex {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 10px;
+}
+
+.logo-pill {
+  width: 20px;
+  height: 10px;
+  background: var(--primary-gradient);
+  border-radius: 5px;
+}
+
+.logo-molecules { display: flex; gap: 3px; }
+
+.molecule-dot {
+  width: 4px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  animation: molecule-pulse 2s infinite alternate;
+}
+
+.molecule-dot:nth-child(2) { animation-delay: 0.3s; }
+.molecule-dot:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes molecule-pulse {
+  0%   { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1;   transform: scale(1.2); }
+}
+
+/* --- Меню навигации --- */
+.nav-menu {
+  display: flex;
+  gap: 34px;
+}
+
+.nav-link {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+  padding: 8px 0;
+  position: relative;
+}
+
+.nav-link:hover { color: var(--primary-color); }
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2.5px;
+  background: var(--primary-gradient);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after { width: 100%; }
+
+/* --- Кнопка Войти / Здравствуйте --- */
+.cta-button {
+  background: var(--primary-gradient);
+  color: var(--primary-btn-text);
+  padding: 12px 45px 12px 28px;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  margin-left: 18px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 22px rgba(255, 206, 20, 0.08);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-family-base);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 215, 0, 0.2);
+  background: var(--primary-gradient-reverse);
+}
+
+/* --- Выпадающее меню пользователя --- */
+.user-menu-container { position: relative; }
+
+.user-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 17px;
+  margin-top: 10px;
+  width: 280px;
+  background: var(--dropdown-bg);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--dropdown-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  overflow: hidden;
+  padding: 10px;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-item {
+  padding: 12px 15px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 16px;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-radius: 8px;
+}
+
+.dropdown-item:hover {
+  background: var(--dropdown-hover-bg);
+  color: var(--dropdown-hover-text);
+}
+
+.dropdown-icon {
+  width: 22px;
+  height: 22px;
+  transition: filter 0.2s;
+  filter: var(--icon-filter-default);
+}
+
+.dropdown-item:hover .dropdown-icon {
+  filter: var(--icon-filter-hover);
+}
+
+.dropdown-divider {
+  height: 1px;
+  background: var(--divider-color);
+  margin: 10px 5px;
+}
+
+/* --- Кнопка выхода --- */
+.logout-btn {
+  width: 100%;
+  padding: 12px 15px;
+  background: transparent;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  font-size: 16px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logout-btn:hover {
+  background: var(--danger-hover-bg);
+  color: var(--danger-hover-text);
+  border-color: var(--danger-hover-bg);
+}
+
+.logout-icon {
+  filter: var(--icon-filter-default);
+}
+
+.logout-btn:hover .logout-icon {
+  filter: var(--icon-filter-hover);
+}
+
+.cart-badge {
+  background: var(--danger-color);
+  color: var(--danger-hover-text);
+  border-radius: 10px;
+  padding: 1px 7px;
+  font-size: 12px;
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+@media (max-width: 860px) {
+  .nav-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .nav-menu { gap: 18px; }
+
+  .cta-button {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-bar,
+  .nav-bar.scrolled { padding: 10px 0; }
+
+  .nav-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .logo { font-size: 20px; }
+  .nav-menu { display: none; }
+}
+
+/* --- Мобильное выпадающее меню --- */
+@media (max-width: 600px) {
+  .user-dropdown {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+    width: 90vw;
+    max-width: 340px;
+    margin-top: 10px;
+    animation: slideDownMobile 0.2s ease-out;
+  }
+}
+
+@keyframes slideDownMobile {
+  from { opacity: 0; transform: translate(-50%, -10px); }
+  to   { opacity: 1; transform: translate(-50%, 0); }
+}

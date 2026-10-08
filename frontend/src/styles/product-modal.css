@@ -1,0 +1,96 @@
+/* === ОКНО "ПОДРОБНЕЕ О ТОВАРЕ" === */
+.product-modal-overlay {
+  display: flex;
+  z-index: 4000;
+}
+
+.product-modal-title {
+  font-family: var(--font-family-base);
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-btn-text);
+}
+
+.review-auth-warning {
+  color: var(--text-color-secondary);
+}
+
+.review-rating-block {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.review-rating-label {
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-stars {
+  display: flex;
+  gap: 5px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.star {
+  color: var(--card-border);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.star.active {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.review-textarea {
+  width: 100%;
+  min-height: 80px;
+  background: var(--color-background);
+  border: 1px solid var(--card-border);
+  color: var(--text-color);
+  padding: 10px;
+  border-radius: 8px;
+  resize: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: var(--font-family-base);
+  transition: border-color 0.2s;
+}
+
+.review-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.review-submit-btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: var(--primary-gradient);
+  color: var(--primary-btn-text);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.review-message {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.review-message.error {
+  color: var(--color-error);
+  background: rgba(192, 21, 47, 0.1);
+}
+
+.review-message.success {
+  color: var(--color-success);
+  background: rgba(76, 175, 80, 0.1);
+}

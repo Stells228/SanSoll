@@ -1,0 +1,207 @@
+/* Бейджи наличия на карточке */
+.stock-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 10;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  backdrop-filter: blur(5px);
+}
+
+.stock-badge.out-stock {
+  background: rgba(192, 21, 47, 0.9);
+  color: #fff;
+}
+
+.stock-badge.low-stock {
+  background: rgba(255, 193, 7, 0.9);
+  color: #000;
+}
+
+/* Слайдер картинок внутри карточки */
+.product-slider {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background: var(--bg-subtle);
+  flex-shrink: 0;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.slider-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .slider-slide img {
+  transform: scale(1.05);
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 10;
+}
+
+.slider-btn {
+  width: 35px;
+  height: 35px;
+  background: var(--color-primary);
+  color: var(--primary-btn-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.slider-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.slider-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--card-border);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 1px solid var(--card-border);
+}
+
+.dot.active {
+  background: var(--color-primary);
+  transform: scale(1.2);
+  box-shadow: var(--glow-color-soft);
+}
+
+/* Кнопки и счётчик */
+.product-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  flex-shrink: 0;
+}
+
+.qty-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-subtle);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50px;
+}
+
+.qty-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-primary);
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 45px;
+  height: 100%;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover {
+  background: var(--method-hover-bg);
+}
+
+.qty-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.qty-value {
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Скидки */
+.product-price-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.price-old {
+  color: var(--color-error);
+  text-decoration: line-through;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.price-new {
+  color: var(--color-primary);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.price-discount-badge {
+  background: var(--color-error);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.bad-disclaimer {
+  background-color: rgba(255, 215, 0, 0.15);
+  border: 1px solid var(--color-primary);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin: 10px 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--text-color);
+  backdrop-filter: blur(5px);
+}

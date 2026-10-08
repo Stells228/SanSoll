@@ -1,0 +1,456 @@
+.contact {
+  background: var(--section-dark-bg);
+  padding: 50px 0 40px 0;
+  position: relative;
+}
+
+.contact .container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Карточка контактов — матовая и полупрозрачная */
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 30px;
+  box-shadow: var(--card-hover-shadow);
+  padding: 60px 36px;
+  position: relative;
+}
+
+/* Левая часть (информация) */
+.contact-info h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 38px;
+  color: var(--text-color);
+}
+
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--primary-color-soft);
+  border: 2px solid var(--card-border);
+  border-radius: 14px;
+  padding: 22px 30px;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.03em;
+  transition: background 0.18s, transform 0.25s, border-color 0.2s, box-shadow 0.25s;
+  position: relative;
+  box-shadow: 0 0 20px var(--glow-soft);
+}
+
+.contact-method:hover {
+  background: var(--method-hover-bg);
+  transform: translateY(-6px);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 35px var(--glow-strong);
+}
+
+.method-icon {
+  font-size: 2.2rem;
+  flex-shrink: 0;
+}
+
+.method-info h4 {
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.method-info span {
+  color: var(--text-color);
+  opacity: 0.85;
+  font-size: 1em;
+}
+
+.method-pills {
+  position: absolute;
+  top: 11px;
+  right: 11px;
+  display: flex;
+  gap: 6px;
+}
+
+.contact-pill {
+  width: 12px;
+  height: 7px;
+  background: var(--primary-gradient);
+  border-radius: 4px;
+  opacity: 0.55;
+  animation: contact-pill-glow 2.2s infinite alternate;
+}
+
+@keyframes contact-pill-glow {
+  0% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 0.85;
+  }
+}
+
+/* Правая часть (визуал "пилюли") */
+.contact-visual {
+  position: relative;
+  height: 320px;
+  z-index: 3;
+}
+
+.contact-logo-complex {
+  width: 170px;
+  height: 170px;
+  margin: 30px auto;
+  position: relative;
+}
+
+.logo-structure {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.main-pill {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 82px;
+  height: 36px;
+  background: var(--primary-gradient);
+  border-radius: 18px;
+  transform: translate(-50%, -50%);
+  animation: main-pill-pulse 3s infinite;
+}
+
+@keyframes main-pill-pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.08);
+  }
+}
+
+.structure-molecules {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.mol-1,
+.mol-2,
+.mol-3,
+.mol-4 {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: radial-gradient(circle, var(--primary-color) 0%, var(--primary-hover) 100%);
+  border-radius: 50%;
+  animation: mol-orbit 8s infinite linear;
+}
+
+.mol-1 {
+  top: 95%;
+  left: 22%;
+  animation-delay: 0s;
+}
+
+.mol-2 {
+  top: 90%;
+  right: 21%;
+  animation-delay: 2s;
+}
+
+.mol-3 {
+  bottom: 5%;
+  right: 26%;
+  animation-delay: 4s;
+}
+
+.mol-4 {
+  bottom: 5%;
+  left: 29%;
+  animation-delay: 6s;
+}
+
+@keyframes mol-orbit {
+  0% {
+    transform: rotate(0deg) translateX(60px) rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(60px) rotate(-360deg);
+  }
+}
+
+.structure-formulas {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 16px;
+}
+
+.struct-formula {
+  font-family: var(--font-family-mono);
+  font-size: 13px;
+  color: var(--primary-color-soft);
+}
+
+.floating-pills-contact {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0;
+  z-index: 2;
+}
+
+.floating-pills-contact .pill {
+  position: absolute;
+  background: var(--primary-gradient);
+  border-radius: 8px;
+  opacity: 0.2;
+  animation: contact-pill-float 6s infinite ease-in-out;
+}
+
+.floating-pills-contact .pill-1 {
+  width: 19px;
+  height: 10px;
+  top: 11%;
+  left: 11%;
+  animation-delay: 0s;
+}
+
+.floating-pills-contact .pill-2 {
+  width: 23px;
+  height: 13px;
+  top: 31%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.floating-pills-contact .pill-3 {
+  width: 15px;
+  height: 9px;
+  bottom: 36%;
+  left: 23%;
+  animation-delay: 2s;
+}
+
+.floating-pills-contact .pill-4 {
+  width: 27px;
+  height: 15px;
+  top: 63%;
+  right: 13%;
+  animation-delay: 3s;
+}
+
+.floating-pills-contact .pill-5 {
+  width: 20px;
+  height: 10px;
+  bottom: 17%;
+  right: 29%;
+  animation-delay: 4s;
+}
+
+.floating-pills-contact .pill-6 {
+  width: 17px;
+  height: 8px;
+  bottom: 11%;
+  left: 45%;
+  animation-delay: 5s;
+}
+
+@keyframes contact-pill-float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-13px) rotate(180deg);
+  }
+}
+
+/* === FOOTER === */
+.footer {
+  padding: 40px 0 24px 0;
+  border-top: 1px solid var(--card-border);
+  background: var(--section-dark-bg-footer);
+  position: relative;
+  z-index: 10;
+}
+
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.footer-logo-complex {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-right: 15px;
+}
+
+.footer-pill {
+  width: 19px;
+  height: 10px;
+  background: var(--primary-gradient);
+  border-radius: 5px;
+}
+
+.footer-molecules {
+  display: flex;
+  gap: 3px;
+}
+
+.footer-mol {
+  width: 5px;
+  height: 5px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  animation: footer-mol-pulse 2s infinite alternate;
+}
+
+.footer-mol:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+@keyframes footer-mol-pulse {
+  0% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.footer-formula {
+  font-family: var(--font-family-mono);
+  font-size: 13px;
+  color: var(--primary-color-soft);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 48px;
+  height: 48px;
+  background: var(--primary-gradient);
+  color: var(--primary-btn-text);
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Изначально скрыта */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.back-to-top--visible {
+  opacity: 0.85;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top--visible:hover {
+  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px var(--glow-soft);
+}
+
+@media (max-width: 900px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 32px 17px;
+  }
+
+  .contact-logo-complex {
+    margin: 0 auto 20px auto;
+    width: 110px;
+    height: 110px;
+  }
+
+  .footer .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-content {
+    padding: 18px 7px;
+  }
+
+  .footer {
+    padding: 18px 0 12px 0;
+  }
+
+  .back-to-top {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+    bottom: 18px;
+    right: 18px;
+  }
+}

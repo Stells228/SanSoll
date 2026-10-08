@@ -1,0 +1,213 @@
+.science {
+  background: radial-gradient(circle at center, var(--bg-subtle) 0%, transparent 70%);
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.science .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Партнёры --- */
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.partner-card {
+  padding: 38px 32px;
+  text-align: center;
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid var(--card-border-secondary);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+  box-shadow: var(--card-shadow);
+}
+
+.partner-card:hover {
+  transform: translateY(-10px);
+  background: var(--method-hover-bg);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.partner-logo {
+  margin-bottom: 18px;
+}
+
+.partner-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  font-size: 2.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  box-shadow: 0 0 16px var(--primary-color-soft);
+}
+
+.partner-card h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.partner-location {
+  font-size: 0.97rem;
+  color: var(--text-color-secondary);
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.partner-advantages {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.advantage {
+  position: relative;
+  padding-left: 22px;
+  color: var(--text-color);
+  margin-bottom: 8px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.advantage::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.partner-formula {
+  font-family: var(--font-family-mono);
+  font-size: 12px;
+  color: var(--primary-color-soft);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* --- Продукция Арго --- */
+.science-molecules-section {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.science-molecules-section h3 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.argo-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.argo-product-card {
+  padding: 26px 22px;
+  text-align: left;
+  background: var(--glass-bg);
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  border: 1px solid var(--card-border-secondary);
+  overflow: hidden;
+}
+
+.argo-product-card:hover {
+  transform: translateY(-7px);
+  background: var(--method-hover-bg);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.argo-product-card h4 {
+  color: var(--primary-hover);
+  font-size: 1.13rem;
+  margin-bottom: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.argo-advantages {
+  list-style: none;
+  margin-bottom: 18px;
+}
+
+.argo-advantages li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 0.96rem;
+  color: var(--text-color);
+}
+
+.adv-icon {
+  color: var(--primary-color);
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 1.09rem;
+}
+
+.argo-components {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--primary-color-soft);
+  color: var(--primary-color);
+  font-family: var(--font-family-mono);
+  font-size: 0.94rem;
+  padding: 6px 11px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px var(--primary-color-soft);
+  transition: transform 0.17s, box-shadow 0.17s;
+}
+
+.component:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px var(--primary-color-soft);
+}
+
+.comp-icon {
+  font-weight: bold;
+  margin-right: 3px;
+  color: var(--primary-hover);
+}
+
+.component span:last-child {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+@media (max-width: 880px) {
+
+  .partners-grid,
+  .argo-products-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .partner-card,
+  .argo-product-card {
+    padding: 24px 10vw;
+  }
+}

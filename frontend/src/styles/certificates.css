@@ -1,0 +1,48 @@
+.certificates {
+  padding: 60px 0;
+  background: var(--bg-subtle);
+}
+
+.certificates-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+.certificate-slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  width: 300px;
+  box-shadow: var(--card-shadow);
+  border-radius: 8px;
+  background: var(--glass-bg);
+  border: 1px solid var(--card-border);
+}
+
+.certificate-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Скроллбар внутри слайдера */
+.certificates-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.certificates-slider::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+  border-radius: 4px;
+}
+
+.certificates-slider::-webkit-scrollbar-thumb {
+  background: var(--primary-gradient);
+  border-radius: 4px;
+}
+
+.certificates-slider::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
